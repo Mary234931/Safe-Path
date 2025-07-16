@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Safe path - Egypt Ring Roads</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  
+  <header>
+    <div class="logo-section">
+      <img src="images/1000295987.png" alt="Safe Path Logo" class="logo">
+    </div>
+  </header>
+
+<a href="home.html" class="btn">Back to home page</a>
+  <section class="intro">
+    <h2 class="About">About Us</h2>
+    <p class="p1"><b> Safe Path is a startup company aiming to provide smart traffic safety solutions by detecting accidents and sending instant alerts to users nearby.</b></p>
+  </section>
+
+
+  
+
+  <div id="filters">
+    <label for="city">Governorate:</label>
+    <select id="city" onchange="changeCity()">
+      <option value="cairo">Cairo</option>
+      <option value="asyut">Asyut</option>
+    </select>
+
+    <label for="type">Accident Type:</label>
+    <select id="type">
+      <option value="all">All</option>
+      <option value="minor">Minor</option>
+      <option value="major">Major</option>
+      <option value="block">Blocked</option>
+    </select>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date">
+
+    <button onclick="applyFilters()">Filter</button>
+  </div>
+
+  <div id="map"></div>
+
+  <section id="report">
+  <h2>Report an Accident</h2>
+  <form id="reportForm">
+    <label for="reportType">Accident Type:</label>
+    <select id="reportType" required>
+      <option value="minor">Minor</option>
+      <option value="major">Major</option>
+      <option value="block">Blocked</option>
+    </select>
+
+    <label for="reportDate">Date:</label>
+    <input type="date" id="reportDate" required>
+
+    <label for="reportCity">Governorate:</label>
+<select id="reportCity" required>
+  <option value="cairo">Cairo</option>
+  <option value="asyut">Asyut</option>
+</select>
+
+    <label for="reportDesc">Description:</label>
+    <textarea id="reportDesc" rows="3" required></textarea>
+
+    <button type="submit">Submit Report</button>
+  </form>
+</section>
+
+  <footer>
+    <p>&copy; 2025 Safe Path. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
